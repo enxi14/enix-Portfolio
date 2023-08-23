@@ -1,0 +1,58 @@
+Week 4 Project
+For this assignment, your task is to add advanced features to your “About Me” page. You should notice that your code is looking increasingly professional, and you are getting closer to having a potential employer looks at what you’ve created to showcase your skills.
+For this project, you will be adding advanced css features to your page. You should make frequent use of pseudo-class and pseudo-element items, and include at least two or three of the following in your design:
+a sass .scss sheet to produce your css file
+media queries
+css animations
+advanced grid
+flexbox
+bootstrap
+When you’ve updated your page, share the code here
+
+
+
+<a href="#contact" class="btn btn-dark btn-lg">Get Started</a>
+
+
+
+.footer-copyright {
+
+color: #0ab2f5;
+
+}
+
+
+#idLinkedInIcon{background-color:rgb(0, 102, 170);border-radius:6px;color:white;cursor:pointer;display:inline-block;font:bold 30px Arial, Helvetica, sans-serif;height:30px;margin-top:1px;text-align:center;width:30px;}
+
+#idLinkedInIcon:hover{background-color:#06d;}
+
+
+<section id="achievements" class="py-5">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Why I wanted to become a Software Dev</h3>
+                            <p class="card-text">Why I wanted to become a software dev because I want more of a challenge in my life. I get bored really easily and
+                                need to keep myself motivated <br>a lot more into doing a lot i want more things around software. <br>Never really
+                                had the time or the money to build a floor to go back to school until I got with Amazon
+                                Been trying to learn for years but never had time to learn. <br>But amazon is giving me a chance to learn with
+                                people in the industry. I want to how far the rabbit hole has to go into coding </p>
+                        </div>
+                    </div>
+                </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+gradient
+
+
+
+<script src=“https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js”></script><lottie-player
+        src=“https://lottie.host/ab3cfdc7-b313-4a8a-84ac-81534fc5c370/pcK6xZ7UWq.json” background=“#fff” speed=“1”
+        style=“width: 300px; height: 300px” loop controls autoplay direction=“1” mode=“normal”></lottie-player>

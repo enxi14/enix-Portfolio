@@ -1,0 +1,23 @@
+Project 1
+Write the html code for a web page about yourself. This page typically contains the following elements:
+A short biography. Include sections on:
+interesting experiences
+hobbies
+work goals
+things you enjoy
+Highlight your work and personal achievements
+Be sure to include the following HTML elements learned this week:
+Headings
+Images
+Paragraphs
+Lists
+Links
+Some of the tags we’ve learned are:
+<p>
+<a>
+<li>
+<ol>
+<ul>
+<img>
+<h1>, <h2>, <h3>, <h4>
+Use the built-in ide to write your code and see what your page looks like! Use the ! trick to get started. (Where, in your empty IDE, you tyle ! and press tab and the basic html starter code prepopulates.)

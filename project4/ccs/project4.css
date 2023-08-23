@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+Html body {
+  background-color: #02608b;
+}
+
+
+
+
+@keyframes moveleftToRight {
+  0% {
+    /*Initialstylesatthestartoftheanimation*/opacity: 0;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+}
+  100% {
+    /* Final styles at the end of the animation */
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+p::first-line {
+    color: white;
+    font-variant: small-caps;
+}
+
+h1 {
+  animation: moveleftToRight 5s ease-in-out;
+}
+
+h1{
+ font-weight: bold;
+}
+
+
+
+
+
+
+.page-header{
+  margin-top: 4rem;
+  font-size: 1.25rem;
+}
+ 
+@media(max-width:767px){
+
+}
+
+.banner10 h2{
+  font-size: 3rem;
+}
+
+
+@keyframes slideInLeft {}
+
+#idLinkedInIcon{background-color:rgb(0, 102, 170);border-radius:6px;color:white;cursor:pointer;display:inline-block;font:bold 30px Arial, Helvetica, sans-serif;height:30px;margin-top:1px;text-align:center;width:30px;}
+
+#idLinkedInIcon:hover{background-color:#06d;}

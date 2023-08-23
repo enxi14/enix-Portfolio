@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="/example_action.html" method="post"></form>
+    <table border="1">
+        <tr>
+            <td colspan="3">
+                <h4>Questions</h4>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="https://source.unsplash.com/random" alt="sport" width="100" height="100"></td>
+            <td><label for="fsport">What is your favorite sport? </label></td>
+            <td><select name="fsport" id="fsport">
+                    <option value="soccer">Soccer</option>
+                    <option value="hockey">Hockey</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="running">Running</option>
+                    <option value="swimming">Swimming</option>
+                    <option value="golf">Golf</option>
+                    <option value="tennis">Tennis</option>
+                    <option value="other">Other</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td rowspan="2"><img src="https://source.unsplash.com/random" alt="pet" width="100" height="100"></td>
+            <td><label for="fpet">Do you have a pet? </label></td>
+            <td><input type="radio" id="yes" name="fpet" value="Yes">
+                <label for="yes">Yes</label><br>
+                <input type="radio" id="no" name="fpet" value="No">
+                <label for="no">No</label>
+            </td>
+        </tr>
+        <tr>
+
+            <td><label for="fNamePet"> What is his name? </label></td>
+            <td><input type="text" id="fNamePet" name="fNamePet"></td>
+        </tr>
+        <tr>
+            <td><img src="https://source.unsplash.com/random" alt="music" width="100" height="100"><br></td>
+            <td><label for="fmusic">What is your genre of music?</label></td>
+            <td><input type="checkbox" id="rock" name="fmusic" value="Rock">
+                <label for="rock">Rock</label><br>
+                <input type="checkbox" id="electronic" name="fmusic" value="Electronic">
+                <label for="electronic">Electronic Music</label><br>
+                <input type="checkbox" id="pop" name="fmusic" value="Pop">
+                <label for="po">Pop</label><br>
+                <input type="checkbox" id="country" name="fmusic" value="Country">
+                <label for="country">Country</label><br>
+                <input type="checkbox" id="other" name="fmusic" value="Other">
+                <label for="other">Other</label>
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Save">
+    </form>
+</body>
+
+</html>
