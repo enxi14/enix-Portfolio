@@ -48,7 +48,9 @@ h1 {
   font-size: 1.25rem;
 }
 
-@media(max-width:767px) {}
+@media(max-width:767px) {
+}
+
 
 .banner10 h2 {
   font-size: 3rem;
