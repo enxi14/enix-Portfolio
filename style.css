@@ -40,6 +40,12 @@ h1 {
 
 
 
+.fa-github:hover,
+.fa-github:focus {
+  color: #000;
+  transform: scale(1.1);
+}
+
 
 
 
