@@ -4,6 +4,15 @@ html body {
   background-color: #02608b;
 }
 
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Add styles to customize dark mode appearance */
+.dark-mode header {
+  background-color: #111;
+}
 
 
 
