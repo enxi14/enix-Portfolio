@@ -4,15 +4,15 @@ html body {
   background-color: #02608b;
 }
 
-.dark-mode {
+.dark-mode #body {
   background-color: #222;
   color: #fff;
 }
 
-
 .dark-mode header {
   background-color: #111;
 }
+
 
 
 
