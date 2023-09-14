@@ -21,7 +21,7 @@ html body {
 }
 
 p::first-line {
-  color: white;
+  color: rgb(0, 0, 0);
   font-variant: small-caps;
 }
 
