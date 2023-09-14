@@ -11,22 +11,22 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     
 </head>
-
-<header>
-    <h1>chris's landing page</h1>
+<body>
+<header class="bg-dark text-light">
+    <div class="container">
+        <h1>Welcome to Chris's Landing Page</h1>
+        <button id="dark-mode-toggle" class="btn btn-light">Dark Mode</button>
+    </div>
 </header>
 
-<body id="body">
-    <div id="page-content">
-    <div class="p-5 text-center bg-image" style="
-        background-image: url('https://i.pinimg.com/564x/69/05/75/690575e7b7e107d409c332f2df2feea5.jpg');
-        background:cover;
-        background-repeat: no-repeat;
-        height: 400px;
-        margin-top:0;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        padding: 0;">
+
+    <div id="image-slider" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/564x/69/05/75/690575e7b7e107d409c332f2df2feea5.jpg" class="d-block w-100"
+                    alt="Image 1">
+            </div>
+        </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
         <div class="container">
@@ -35,7 +35,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <button id="dark-mode-toggle" class="btn btn-primary">Dark Mode</button>
+            
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav lg-auto">
                     <li class="nav-item active">
