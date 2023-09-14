@@ -78,10 +78,10 @@ h1 {
 }
 
 body.dark-mode {
-  background-color: #222;
+  background-color: #222 !important;
   color: #fff;
 }
 
 header.dark-mode {
-  background-color: #111;
+  background-color: #111 !important;
 }
