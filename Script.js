@@ -1,6 +1,6 @@
 
 const darkModeToggle = document.getElementById("dark-mode-toggle");
-const body = document.getElementById("body");
+const body = document.body; // Corrected selection to target the body element
 
 function toggleDarkMode() {
     if (body.classList.contains("dark-mode")) {
@@ -14,6 +14,7 @@ function toggleDarkMode() {
 
 darkModeToggle.addEventListener("click", toggleDarkMode);
 
+// Check for user's preferred color scheme and apply dark mode if needed
 const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
 if (prefersDarkMode.matches) {
     body.classList.add("dark-mode");
