@@ -61,7 +61,7 @@ h1 {
 @keyframes slideInLeft {}
 
 #idLinkedInIcon {
-  background-color: white;
+  background-color: rgb(0, 102, 170);
   border-radius: 6px;
   color: white;
   cursor: pointer;
