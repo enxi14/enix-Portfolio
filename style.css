@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 html body {
-  background-color: #02608b;
+  background-color: white;
 }
 
 @keyframes moveleftToRight {
