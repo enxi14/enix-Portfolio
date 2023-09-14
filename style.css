@@ -4,18 +4,6 @@ html body {
   background-color: #02608b;
 }
 
-.dark-mode #body {
-  background-color: #222;
-  color: #fff;
-}
-
-.dark-mode header {
-  background-color: #111;
-}
-
-
-
-
 @keyframes moveleftToRight {
   0% {
     /*Initialstylesatthestartoftheanimation*/
@@ -89,4 +77,13 @@ h1 {
 
 #idLinkedInIcon:hover {
   background-color: #06d;
+}
+
+.dark-mode #body {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode header {
+  background-color: #111;
 }
