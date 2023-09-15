@@ -14,7 +14,7 @@ function toggleDarkMode() {
 
 darkModeToggle.addEventListener("click", toggleDarkMode);
 
-/
+
 const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
 if (prefersDarkMode.matches) {
     body.classList.add("dark-mode");
