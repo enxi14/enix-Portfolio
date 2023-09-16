@@ -83,7 +83,7 @@ body {
 }
 
 #dark-mode-toggle {
-  position: fixed;
+  position: center;
   top: 20px;
   right: 20px;
   z-index: 9999;
