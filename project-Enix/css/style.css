@@ -33,17 +33,11 @@ h1 {
   font-weight: bold;
 }
 
-
-
 .fa-github:hover,
 .fa-github:focus {
   color: #000;
   transform: scale(1.1);
 }
-
-
-
-
 .page-header {
   margin-top: 4rem;
   font-size: 1.25rem;
@@ -77,14 +71,11 @@ h1 {
   background-color: #06d;
 }
 
-
-body {
-  background-color: white;
-}
-
+/* Add CSS styles for the dark mode button */
 #dark-mode-toggle {
-  position: center;
-  top: 20px;
+  position: fixed;
+  bottom: 20px;
+  /* Changed to bottom */
   right: 20px;
   z-index: 9999;
   background-color: #fff;
@@ -94,61 +85,25 @@ body {
   border-radius: 5px;
 }
 
+/* Style for dark mode */
 .dark-mode {
   background-color: #222;
   color: #fff;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: all 0.4s ease-in;
-  border-radius: 2.13rem;
+/* Add animation for the dark mode toggle button */
+#dark-mode-toggle.active {
+  animation: moveleftToRight 0.5s ease-in-out;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 1.63rem;
-  width: 1.63rem;
-  left: 0.25rem;
-  bottom: 0.25rem;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
+@keyframes moveleftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
 
-input:checked+.slider {
-  background-color: #2196f3;
-}
-
-input:focus+.slider {
-  box-shadow: 0 0 2px #2196f3;
-}
-
-input:checked+.slider:before {
-  transform: translateX(1.63rem);
-}
-
-
-.slider-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-
-.slider img {
-  width: 100%;
-  height: auto;
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
