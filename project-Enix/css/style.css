@@ -8,16 +8,16 @@ html body {
   0% {
     opacity: 0;
     transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
   }
 
   100% {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+h1 {
+  animation: moveleftToRight 5s ease-in-out;
 }
 
 p::first-line {
@@ -78,20 +78,22 @@ h1 {
 }
 
 
- /* Add CSS styles for the dark mode button */
-  #dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    background-color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+body {
+  background-color: white;
 }
 
- /* Style for dark mode */
+#dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .dark-mode {
   background-color: #222;
   color: #fff;
