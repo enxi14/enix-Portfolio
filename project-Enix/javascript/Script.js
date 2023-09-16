@@ -10,14 +10,14 @@ function disableDarkMode() {
     localStorage.setItem('darkMode', 'disabled');
 }
 
-// Toggle dark mode when the button is clicked
+// Toggle dark mode when the switch is clicked
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-darkModeToggle.addEventListener('click', () => {
-    if (document.body.classList.contains('dark-mode')) {
-        disableDarkMode();
-    } else {
+darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
         enableDarkMode();
+    } else {
+        disableDarkMode();
     }
 });
 
@@ -26,4 +26,5 @@ const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
 
 if (isDarkMode) {
     enableDarkMode();
+    darkModeToggle.checked = true;
 }
