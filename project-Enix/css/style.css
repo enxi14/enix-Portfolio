@@ -78,30 +78,47 @@ h1 {
 }
 
 
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+}
+
+
 .dark-mode {
+  --background-color-dark: #000000;
+  --text-color-dark: #ffffff;
+}
+
+
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+
+#dark-mode-toggle {
   background-color: #333;
-  color: #f0f0f0;
-  transition: all 0.4s ease-in;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.container {
-  position: absolute;
-  bottom: 0;
+#dark-mode-toggle:hover {
+  background-color: #555;
 }
 
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 3.75rem;
-  height: 2.13rem;
-  margin-bottom: 0.63rem;
-  margin-inline: auto;
-}
 
-.toggle-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+body:not(.dark-mode) #dark-mode-toggle {
+  background-color: #fff;
+  color: #333;
 }
 
 .slider {
