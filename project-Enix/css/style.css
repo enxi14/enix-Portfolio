@@ -78,47 +78,23 @@ h1 {
 }
 
 
-:root {
-  --background-color-light: #ffffff;
-  --text-color-light: #000000;
+ /* Add CSS styles for the dark mode button */
+  #dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-
+ /* Style for dark mode */
 .dark-mode {
-  --background-color-dark: #000000;
-  --text-color-dark: #ffffff;
-}
-
-
-body {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
-}
-
-
-body.dark-mode {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
-
-
-#dark-mode-toggle {
-  background-color: #333;
+  background-color: #222;
   color: #fff;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-#dark-mode-toggle:hover {
-  background-color: #555;
-}
-
-
-body:not(.dark-mode) #dark-mode-toggle {
-  background-color: #fff;
-  color: #333;
 }
 
 .slider {
