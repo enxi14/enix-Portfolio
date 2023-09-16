@@ -34,10 +34,9 @@ function updateSlider() {
     slider.style.transform = `translateX(${translateX}%)`;
 }
 
-setInterval(nextSlide, 3000); // Auto slide every 3 seconds
+setInterval(nextSlide, 3000); 
 
-// Optionally, you can add buttons or other controls to manually navigate the slider.
-// Here's an example of adding previous and next buttons:
+
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 
