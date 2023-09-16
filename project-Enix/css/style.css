@@ -127,3 +127,26 @@ input:focus+.slider {
 input:checked+.slider:before {
   transform: translateX(1.63rem);
 }
+
+/* Add this CSS to center the toggle-container within the footer */
+footer {
+  background-color: #333;
+  /* Dark background color for the footer */
+  padding: 20px;
+  /* Add some padding to the footer */
+  position: relative;
+  /* Position the footer relative to its container */
+  color: white;
+  /* Text color for the toggle label */
+}
+
+.toggle-container {
+  display: flex;
+  /* Use flexbox layout */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100%;
+  /* Make the container fill the height of the footer */
+}
