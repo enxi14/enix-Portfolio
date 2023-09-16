@@ -78,62 +78,76 @@ h1 {
 }
 
 
-:root {
-  --background-color-light: #ffffff;
-  --text-color-light: #000000;
-}
-
-
 .dark-mode {
-  --background-color-dark: #000000;
-  --text-color-dark: #ffffff;
-}
-
-
-body {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
-}
-
-
-body.dark-mode {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
-
-
-#dark-mode-toggle {
   background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
+  color: #f0f0f0;
+  transition: all 0.4s ease-in;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 2.13rem;
+  margin-bottom: 0.63rem;
+  margin-inline: auto;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: all 0.4s ease-in;
+  border-radius: 2.13rem;
 }
 
-#dark-mode-toggle:hover {
-  background-color: #555;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.63rem;
+  width: 1.63rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #2196f3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 2px #2196f3;
+}
+
+input:checked+.slider:before {
+  transform: translateX(1.63rem);
 }
 
 
-body:not(.dark-mode) #dark-mode-toggle {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Style the slider container */
 .slider-container {
   width: 100%;
   overflow: hidden;
 }
 
-/* Style the slider */
+
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-/* Style the images inside the slider */
+
 .slider img {
   width: 100%;
   height: auto;

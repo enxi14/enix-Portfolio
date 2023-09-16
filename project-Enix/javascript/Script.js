@@ -1,25 +1,19 @@
 
-const darkModeToggle = document.getElementById("dark-mode-toggle");
-const body = document.body; 
+const body = document.querySelector('body');
+const modeToggle = document.getElementById('mode-toggle');
+const modeStatus = document.querySelector('.mode-status');
 
-function toggleDarkMode() {
-    if (body.classList.contains("dark-mode")) {
-        body.classList.remove("dark-mode");
-        darkModeToggle.textContent = "Dark Mode";
-    } else {
-        body.classList.add("dark-mode");
-        darkModeToggle.textContent = "Light Mode";
-    }
+function toggleMode() {
+    body.classList.toggle('dark-mode');
+
+    const modeMessage = body.classList.contains('dark-mode') ?
+        'Dark Mode'
+        : "Light Mode"
+
+    modeStatus.innerText = "Currently in " + modeMessage;
 }
 
-darkModeToggle.addEventListener("click", toggleDarkMode);
-
-
-const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
-if (prefersDarkMode.matches) {
-    body.classList.add("dark-mode");
-    darkModeToggle.textContent = "Light Mode";
-}
+modeToggle.addEventListener('click', toggleMode);
 
 const slider = document.querySelector('.slider');
 let imageIndex = 0;
