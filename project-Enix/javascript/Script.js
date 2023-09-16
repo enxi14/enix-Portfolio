@@ -58,12 +58,6 @@ if (prevButton && nextButton) {
     nextButton.addEventListener('click', nextSlide);
 }
 
-// Get the dark mode toggle button and store it in a variable
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-// Check if dark mode preference is stored in localStorage
-const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-
 // Function to enable dark mode
 function enableDarkMode() {
     document.body.classList.add('dark-mode');
@@ -88,5 +82,4 @@ darkModeToggle.addEventListener('click', () => {
 // Set initial dark mode state based on user preference
 if (isDarkMode) {
     enableDarkMode();
-
 }
