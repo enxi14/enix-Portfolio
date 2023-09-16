@@ -89,3 +89,4 @@ darkModeToggle.addEventListener('click', () => {
 if (isDarkMode) {
     enableDarkMode();
 
+}
