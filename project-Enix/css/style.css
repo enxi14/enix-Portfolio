@@ -71,48 +71,59 @@ h1 {
   background-color: #06d;
 }
 
-.toggle-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+  transition: all 0.4s ease-in;
 }
 
-.toggle-label {
-  margin-right: 10px;
-  color: #fff;
-}
-
-.toggle {
-  appearance: none;
-  width: 40px;
-  height: 20px;
-  background-color: #ccc;
-  border-radius: 20px;
+.toggle-switch {
   position: relative;
-  cursor: pointer;
+  display: inline-block;
+  width: 3.75rem;
+  height: 2.13rem;
+  margin-bottom: 0.63rem;
+  margin-inline: auto;
 }
 
-.toggle::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border-radius: 50%;
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
   position: absolute;
+  cursor: pointer;
   top: 0;
   left: 0;
-  transition: transform 0.3s ease-in-out;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: all 0.4s ease-in;
+  border-radius: 2.13rem;
 }
 
-/* Style for dark mode */
-.dark-mode {
-  background-color: #222;
-  color: #fff;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.63rem;
+  width: 1.63rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
-/* Adjust the switch position for dark mode */
-.dark-mode .toggle::before {
-  transform: translateX(20px);
+input:checked+.slider {
+  background-color: #2196f3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 2px #2196f3;
+}
+
+input:checked+.slider:before {
+  transform: translateX(1.63rem);
 }

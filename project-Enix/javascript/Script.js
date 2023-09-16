@@ -1,30 +1,15 @@
-// Function to enable dark mode
-function enableDarkMode() {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'enabled');
+const body = document.querySelector('body');
+const modeToggle = document.getElementById('mode-toggle');
+const modeStatus = document.querySelector('.mode-status');
+
+function toggleMode() {
+    body.classList.toggle('dark-mode');
+
+    const modeMessage = body.classList.contains('dark-mode') ?
+        'Dark Mode'
+        : "Light Mode"
+
+    modeStatus.innerText = "Currently in " + modeMessage;
 }
 
-// Function to disable dark mode
-function disableDarkMode() {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'disabled');
-}
-
-// Toggle dark mode when the switch is clicked
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-darkModeToggle.addEventListener('change', () => {
-    if (darkModeToggle.checked) {
-        enableDarkMode();
-    } else {
-        disableDarkMode();
-    }
-});
-
-// Check initial dark mode state based on user preference
-const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-
-if (isDarkMode) {
-    enableDarkMode();
-    darkModeToggle.checked = true;
-}
+modeToggle.addEventListener('click', toggleMode);
