@@ -139,3 +139,15 @@ input:checked+.slider:before {
   height: 100%;
   /* Make the container fill the height of the footer */
 }
+
+.fade-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.fade,
+.slide {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
