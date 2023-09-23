@@ -42,10 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
-    // Initial check when the page loads
-    checkFadeSlide();
+checkFadeSlide();
 
-    // Check on scroll
+    
     window.addEventListener("scroll", checkFadeSlide);
 });
 
