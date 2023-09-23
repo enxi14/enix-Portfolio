@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-
+html body {
+  background-color: white
+}
 
 @keyframes moveleftToRight {
   0% {
@@ -16,11 +18,6 @@
 
 h1 {
   animation: moveleftToRight 5s ease-in-out;
-}
-
-p::first-line {
-  color: rgb(0, 0, 0);
-  font-variant: small-caps;
 }
 
 h1 {
