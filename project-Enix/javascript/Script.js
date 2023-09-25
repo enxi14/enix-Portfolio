@@ -48,14 +48,14 @@ checkFadeSlide();
     window.addEventListener("scroll", checkFadeSlide);
 });
 
-// Get the mode toggle switch element
+
 const modeToggle = document.getElementById('mode-toggle');
 
-// Get the body element
+
 const body = document.body;
 
-// Add an event listener to the mode toggle switch
+
 modeToggle.addEventListener('change', () => {
-    // Toggle the "dark-mode" class on the body element
+
     body.classList.toggle('dark-mode');
 });
