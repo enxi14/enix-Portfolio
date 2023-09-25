@@ -1,19 +1,3 @@
-const body = document.querySelector('body');
-const modeToggle = document.getElementById('mode-toggle');
-const modeStatus = document.querySelector('.mode-status');
-
-function toggleMode() {
-    body.classList.toggle('dark-mode');
-
-    const modeMessage = body.classList.contains('dark-mode') ?
-        'Dark Mode'
-        : "Light Mode"
-
-    modeStatus.innerText = "Currently in " + modeMessage;
-}
-
-modeToggle.addEventListener('click', toggleMode);
-
 document.addEventListener("DOMContentLoaded", function () {
     const fadeElements = document.querySelectorAll(".fade");
     const slideElements = document.querySelectorAll(".slide");
@@ -58,4 +42,16 @@ const body = document.body;
 modeToggle.addEventListener('change', () => {
 
     body.classList.toggle('dark-mode');
+});
+
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
+        body.classList.add('dark-mode');
+    } else {
+        body.classList.remove('dark-mode');
+    }
 });
