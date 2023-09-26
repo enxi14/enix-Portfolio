@@ -87,14 +87,3 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Light Mode Styles */
-body {
-  background-color: #ffffff;
-  color: #333333;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #333333;
-  color: #ffffff;
-}
