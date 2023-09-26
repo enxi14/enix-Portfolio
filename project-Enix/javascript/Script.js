@@ -35,23 +35,16 @@ checkFadeSlide();
 const modeToggle = document.getElementById('mode-toggle');
 
 
-// Function to toggle dark mode
-function toggleDarkMode() {
+
+    const darkModeToggle = document.getElementById("darkModeToggle");
     const body = document.body;
-    body.classList.toggle('dark-mode');
 
-    // Save the user's preference in local storage
-    const isDarkModeEnabled = body.classList.contains('dark-mode');
-    localStorage.setItem('dark-mode', isDarkModeEnabled);
-}
+  darkModeToggle.addEventListener("change", () => {
+    if (darkModeToggle.checked) {
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.remove("dark-mode");
+    }
+  });
 
-// Check if the user has a preference for dark mode from previous visits
-const savedDarkMode = localStorage.getItem('dark-mode');
-if (savedDarkMode === 'true') {
-    document.body.classList.add('dark-mode');
-}
-
-// Add event listener to the toggle switch
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-darkModeToggle.addEventListener('change', toggleDarkMode);
 
