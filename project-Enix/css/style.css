@@ -65,21 +65,21 @@ h1 {
 }
 
 body {
-  transition: background - color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 
-body.dark - mode {
-  background - color: black;
+body.dark-mode {
+  background-color: black;
   color: white;
 }
 
-#dark - mode - toggle {
-  display: inline - block;
+#dark-mode-toggle {
+  display: inline-block;
   width: 40px;
   height: 20px;
   margin: 0 10px;
 }
 
-#dark - mode - toggle:checked {
-  background - color: #212121;
+#dark-mode-toggle:checked {
+  background-color: #212121;
 }
