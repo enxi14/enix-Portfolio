@@ -64,3 +64,5 @@ const modeToggle = document.getElementById('mode-toggle');
     // Add event listener for the dark mode toggle
     darkModeToggle.addEventListener("change", toggleDarkMode);
 
+const darkModeToggle = document.getElementById("mode-toggle");
+
