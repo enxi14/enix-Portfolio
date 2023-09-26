@@ -32,26 +32,12 @@ checkFadeSlide();
     window.addEventListener("scroll", checkFadeSlide);
 });
 
-
 const modeToggle = document.getElementById('mode-toggle');
-
-
-const body = document.body;
-
-
-modeToggle.addEventListener('change', () => {
-
-    body.classList.toggle('dark-mode');
-});
 
 
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
-darkModeToggle.addEventListener('change', () => {
-    if (darkModeToggle.checked) {
-        body.classList.add('dark-mode');
-    } else {
-        body.classList.remove('dark-mode');
-    }
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
 });
