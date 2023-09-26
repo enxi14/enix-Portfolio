@@ -64,3 +64,22 @@ h1 {
   background-color: #06d;
 }
 
+body {
+  transition: background - color 0.2s linear;
+}
+
+body.dark - mode {
+  background - color: black;
+  color: white;
+}
+
+#dark - mode - toggle {
+  display: inline - block;
+  width: 40px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+#dark - mode - toggle:checked {
+  background - color: #212121;
+}
