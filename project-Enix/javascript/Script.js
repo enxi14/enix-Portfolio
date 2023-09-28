@@ -37,32 +37,23 @@ const modeToggle = document.getElementById('mode-toggle');
 
 
 
-  // Function to set dark mode
-    function setDarkMode(isDarkMode) {
-    const body = document.body;
-    if (isDarkMode) {
-        body.classList.add("dark-mode");
-    localStorage.setItem("darkMode", "enabled");
+// Get the sun and moon icons
+const sunIcon = document.querySelector('.fa-sun');
+const moonIcon = document.querySelector('.fa-moon');
+
+// Toggle dark/light mode when the checkbox is clicked
+darkModeToggle.addEventListener('change', () => {
+    if (body.classList.contains('dark-mode')) {
+        // If dark mode is currently enabled, switch to light mode
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+        sunIcon.style.display = 'inline-block';
+        moonIcon.style.display = 'none';
     } else {
-        body.classList.remove("dark-mode");
-    localStorage.setItem("darkMode", "disabled");
+        // If light mode is currently enabled, switch to dark mode
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline-block';
     }
-}
-
-    // Function to toggle dark mode
-    function toggleDarkMode() {
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    setDarkMode(darkModeToggle.checked);
-}
-
-    // Check local storage for user preference
-    const isDarkModeEnabled = localStorage.getItem("darkMode") === "enabled";
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    darkModeToggle.checked = isDarkModeEnabled;
-    setDarkMode(isDarkModeEnabled);
-
-    // Add event listener for the dark mode toggle
-    darkModeToggle.addEventListener("change", toggleDarkMode);
-
-const darkModeToggle = document.getElementById("mode-toggle");
-
+});
