@@ -86,3 +86,11 @@ body {
 h1 {
   margin-bottom: 20px;
 }
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  /* Change the background color for dark mode */
+  color: #fff;
+  /* Change text color for dark mode */
+}
