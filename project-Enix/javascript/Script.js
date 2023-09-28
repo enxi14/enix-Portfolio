@@ -37,23 +37,39 @@ const modeToggle = document.getElementById('mode-toggle');
 
 
 
-// Get the sun and moon icons
-const sunIcon = document.querySelector('.fa-sun');
-const moonIcon = document.querySelector('.fa-moon');
+const darkModeToggle = document.getElementById('darkModeToggle');
+const modeIcon = document.getElementById('modeIcon');
+const body = document.body;
 
-// Toggle dark/light mode when the checkbox is clicked
 darkModeToggle.addEventListener('change', () => {
-    if (body.classList.contains('dark-mode')) {
-        // If dark mode is currently enabled, switch to light mode
-        body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'disabled');
-        sunIcon.style.display = 'inline-block';
-        moonIcon.style.display = 'none';
-    } else {
-        // If light mode is currently enabled, switch to dark mode
+    if (darkModeToggle.checked) {
         body.classList.add('dark-mode');
+        modeIcon.classList.add('fa-moon'); // If you're using Font Awesome, add moon icon class
+        modeIcon.classList.remove('fa-sun'); // Remove sun icon class
+    } else {
+        body.classList.remove('dark-mode');
+        modeIcon.classList.add('fa-sun'); // Add sun icon class
+        modeIcon.classList.remove('fa-moon'); // Remove moon icon class
+    }
+});
+
+// Initialize mode based on user's preference (you can use local storage for this)
+if (localStorage.getItem('darkMode') === 'enabled') {
+    darkModeToggle.checked = true;
+    body.classList.add('dark-mode');
+    modeIcon.classList.add('fa-moon'); // If you're using Font Awesome, add moon icon class
+    modeIcon.classList.remove('fa-sun'); // Remove sun icon class
+} else {
+    body.classList.remove('dark-mode');
+    modeIcon.classList.add('fa-sun'); // Add sun icon class
+    modeIcon.classList.remove('fa-moon'); // Remove moon icon class
+}
+
+// Save user's preference in local storage
+darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
         localStorage.setItem('darkMode', 'enabled');
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'inline-block';
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
     }
 });
