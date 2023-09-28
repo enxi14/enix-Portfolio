@@ -86,25 +86,3 @@ body {
 h1 {
   margin-bottom: 20px;
 }
-
-/* Dark Mode Styles */
-.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-/* Light Mode Styles */
-.light-mode {
-  background-color: #fff;
-  color: #333;
-}
-
-.mode-icon::before {
-  content: '\2600';
-  /* Sun Unicode Character */
-}
-
-.dark-mode .mode-icon::before {
-  content: '\1F31A';
-  /* Crescent Moon Unicode Character */
-}
