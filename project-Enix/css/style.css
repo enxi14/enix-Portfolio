@@ -94,3 +94,20 @@ h1 {
   color: #fff;
   /* Change text color for dark mode */
 }
+
+
+
+/* Apply this style to the paragraph within the achievements section */
+#achievements p {
+  color: #fff;
+  /* Set the text color to white for light mode */
+}
+
+/* Apply this style when dark mode is active */
+@media (prefers-color-scheme: dark) {
+  #achievements p {
+    color: #000;
+    /* Set the text color to black for dark mode */
+  }
+}
+
