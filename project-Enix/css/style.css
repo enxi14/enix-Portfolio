@@ -98,14 +98,14 @@ h1 {
 
 
 /* Apply this style to the paragraph within the achievements section */
-#Home p {
+#Home #Personal-Achievements #About-Me #Projects p {
   color: #fff;
   /* Set the text color to white for light mode */
 }
 
 /* Apply this style when dark mode is active */
 @media (prefers-color-scheme: dark) {
-  #Home p {
+  #Home #Personal-Achievements #About-Me #Projects p {
     color: #000;
     /* Set the text color to black for dark mode */
   }
