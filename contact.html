@@ -41,32 +41,35 @@
     </div>
     
 <section id="contact" class="py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 offset-sm-4 text-center">
-                    <h2>Contact Us</h2>
-                    <form>
-                        <div class="sm-2">
-                            <label for="fullName" class="form-label">Full Name:</label>
-                            <input type="text" class="form-control" id="fullName">
-                        </div>
-                        <div class="sm-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="sm-2">
-                            <label for="message" class="form-label">Message:</label>
-                            <textarea class="form-control" id="message" rows="3"></textarea>
-                        </div>
-                        <div class="sm-3">
-                        <button type="submit" class="btn btn-outline-info">Send</button>
-                        </div>
-                    </form>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneNumber" class="form-label">Phone Number:</label>
+                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
     </div>
+</section>
 
     <div class="fade-slide">
         <div class="fade"></div>
