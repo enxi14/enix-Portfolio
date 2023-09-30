@@ -88,23 +88,23 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Dark mode styles */
+
 .dark-mode {
   background-color: #333;
-  /* Change the background color for dark mode */
+  
   color: #fff;
-  /* Change text color for dark mode */
+  
 }
 
 
 
-/* Apply this style to the paragraph within the achievements section */
+
 #Home #Personal-Achievements #About-Me #Projects p {
   color: #fff;
   /* Set the text color to white for light mode */
 }
 
-/* Apply this style when dark mode is active */
+
 @media (prefers-color-scheme: dark) {
   #Home #Personal-Achievements #About-Me #Projects p {
     color: #000;
