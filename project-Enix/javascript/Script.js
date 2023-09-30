@@ -42,14 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
 
-    // Check if dark mode is enabled or disabled
+    
     if (localStorage.getItem('darkMode') === 'enabled') {
         enableDarkMode();
     } else {
         disableDarkMode();
     }
 
-    // Toggle dark mode when the switch is clicked
+    
     darkModeToggle.addEventListener('change', () => {
         if (localStorage.getItem('darkMode') !== 'enabled') {
         enableDarkMode();
@@ -58,13 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Function to enable dark mode
+    
     function enableDarkMode() {
         body.classList.add('dark-mode');
     localStorage.setItem('darkMode', 'enabled');
     }
 
-    // Function to disable dark mode
+
     function disableDarkMode() {
         body.classList.remove('dark-mode');
     localStorage.setItem('darkMode', 'disabled');
