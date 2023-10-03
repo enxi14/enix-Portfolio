@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
     
 
-// Define the validation function
+
 function validateForm() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
@@ -93,30 +93,16 @@ function validateForm() {
         return false;
     }
 
-    // You can add more specific email validation if needed.
-    // For a basic check, you can use a regular expression like this:
-    // if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
-    //     alert("Please enter a valid email address.");
-    //     return false;
-    // }
-
+    
     if (phone === "") {
         alert("Please enter a phone number.");
         return false;
     }
 
-    // You can add more specific phone number validation if needed.
-    // For a basic check, you can use a regular expression like this:
-    // if (!/^\d{10}$/.test(phone)) {
-    //     alert("Please enter a valid 10-digit phone number.");
-    //     return false;
-    // }
-
-    // If all validations pass, the form will submit.
     return true;
 }
 
-// You can attach the validation function to the form's submit event
+
 var registrationForm = document.getElementById("registrationForm");
 registrationForm.onsubmit = function () {
     return validateForm();
