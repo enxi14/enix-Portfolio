@@ -40,35 +40,34 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
     const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
+const body = document.body;
 
-    
+document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem('darkMode') === 'enabled') {
         enableDarkMode();
     } else {
         disableDarkMode();
     }
 
-    
     darkModeToggle.addEventListener('change', () => {
         if (localStorage.getItem('darkMode') !== 'enabled') {
-        enableDarkMode();
+            enableDarkMode();
         } else {
-        disableDarkMode();
+            disableDarkMode();
         }
     });
 
-    
     function enableDarkMode() {
         body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'enabled');
+        localStorage.setItem('darkMode', 'enabled');
     }
-
 
     function disableDarkMode() {
         body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'disabled');
-}
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
+
     
 
 
