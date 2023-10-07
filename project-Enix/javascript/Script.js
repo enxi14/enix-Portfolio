@@ -104,6 +104,6 @@ function validateForm() {
 
 
 var registrationForm = document.getElementById("registrationForm");
-registrationForm.onsubmit = function () {
+registrationForm.onsubmit = function (){
     return validateForm();
 };
