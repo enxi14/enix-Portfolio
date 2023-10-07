@@ -9,8 +9,24 @@ const questions = [
         choices: ["Earth", "Mars", "Jupiter", "Venus"],
         correctAnswer: "Mars"
     },
+    {
+        question: "Which gas do plants absorb from the atmosphere?",
+        choices: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+        correctAnswer: "Carbon Dioxide"
+    },
+    {
+        question: "What is the largest mammal in the world?",
+        choices: ["Elephant", "Giraffe", "Blue Whale", "Lion"],
+        correctAnswer: "Blue Whale"
+    },
+    {
+        question: "Which element has the chemical symbol 'Fe'?",
+        choices: ["Iron", "Gold", "Silver", "Copper"],
+        correctAnswer: "Iron"
+    },
     // Add more questions here
 ];
+
 
 const questionElement = document.getElementById("question");
 const choicesElement = document.getElementById("choices");
