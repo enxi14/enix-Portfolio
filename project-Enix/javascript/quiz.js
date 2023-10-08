@@ -28,48 +28,47 @@ const questions = [
 ];
 
 
-const questionElement = document.getElementById("question");
-const choicesElement = document.getElementById("choices");
-const submitButton = document.getElementById("submit");
-const resultElement = document.getElementById("result");
+const questionElement = $("#question");
+    const choicesElement = $("#choices");
+    const submitButton = $("#submit");
+    const resultElement = $("#result");
 
-let currentQuestion = 0;
-let score = 0;
+    let currentQuestion = 0;
+    let score = 0;
 
-function displayQuestion() {
-    questionElement.textContent = questions[currentQuestion].question;
-    choicesElement.innerHTML = "";
+    function displayQuestion() {
+        questionElement.text(questions[currentQuestion].question);
+        choicesElement.empty();
 
-    questions[currentQuestion].choices.forEach(choice => {
-        const li = document.createElement("li");
-        li.textContent = choice;
-        li.addEventListener("click", checkAnswer);
-        choicesElement.appendChild(li);
+        questions[currentQuestion].choices.forEach(choice => {
+            const li = $("<li>").text(choice);
+            li.on("click", checkAnswer);
+            choicesElement.append(li);
+        });
+    }
+
+    function checkAnswer() {
+        const selectedAnswer = $(this).text();
+        if (selectedAnswer === questions[currentQuestion].correctAnswer) {
+            score++;
+        }
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            displayQuestion();
+        } else {
+            displayResult();
+        }
+    }
+
+    function displayResult() {
+        questionElement.text("");
+        choicesElement.empty();
+        resultElement.text(`You scored ${score} out of ${questions.length} questions!`);
+        submitButton.hide();
+    }
+
+    displayQuestion();
+
+    submitButton.on("click", () => {
+        checkAnswer();
     });
-}
-
-function checkAnswer(event) {
-    const selectedAnswer = event.target.textContent;
-    if (selectedAnswer === questions[currentQuestion].correctAnswer) {
-        score++;
-    }
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
-        displayQuestion();
-    } else {
-        displayResult();
-    }
-}
-
-function displayResult() {
-    questionElement.textContent = "";
-    choicesElement.innerHTML = "";
-    resultElement.textContent = `You scored ${score} out of ${questions.length} questions!`;
-    submitButton.style.display = "none";
-}
-
-displayQuestion();
-
-submitButton.addEventListener("click", () => {
-    checkAnswer();
-});
