@@ -107,7 +107,6 @@ function validateForm() {
 }
 
 function isValidEmail(email) {
-   
 }
 
 function isValidPhoneNumber(phone) {
