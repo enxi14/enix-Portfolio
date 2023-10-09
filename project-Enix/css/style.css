@@ -147,7 +147,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* Sticky footer styles */
+
 .sticky-footer {
   position: fixed;
   bottom: 0;
@@ -158,3 +158,28 @@ input[type="submit"] {
   text-align: center;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#registrationContainer {
+  text-align: center;
+}
+
+#registrationForm {
+  text-align: left;
+  display: inline-block;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+}
