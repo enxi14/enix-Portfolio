@@ -1,7 +1,11 @@
+
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
+
 
 .quiz-container {
     max-width: 600px;
@@ -9,22 +13,30 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
 }
+
 
 button {
     background-color: #007BFF;
     color: #fff;
     border: none;
     padding: 15px 30px;
-    /* Increase padding for longer buttons */
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    /* Optionally, adjust font size */
+    transition: background-color 0.3s ease;
     width: 200px;
-    /* Adjust the width as needed */
 }
+
 
 button:hover {
     background-color: #0056b3;
+}
+
+
+button+button {
+    margin-top: 10px;
 }
