@@ -77,32 +77,44 @@ function validateForm() {
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
 
-    if (username === "") {
+    if (username.trim() === "") {
         alert("Please enter a username.");
         return false;
     }
 
-    if (password === "") {
+    if (password.trim() === "") {
         alert("Please enter a password.");
         return false;
     }
 
-    if (email === "") {
+    if (email.trim() === "") {
         alert("Please enter an email address.");
+        return false;
+    } else if (!isValidEmail(email)) {
+        alert("Please enter a valid email address.");
         return false;
     }
 
-    
-    if (phone === "") {
+    if (phone.trim() === "") {
         alert("Please enter a phone number.");
+        return false;
+    } else if (!isValidPhoneNumber(phone)) {
+        alert("Please enter a valid phone number.");
         return false;
     }
 
     return true;
 }
 
+function isValidEmail(email) {
+   
+}
+
+function isValidPhoneNumber(phone) {
+    
+}
 
 var registrationForm = document.getElementById("registrationForm");
-registrationForm.onsubmit = function (){
+registrationForm.onsubmit = function () {
     return validateForm();
 };
