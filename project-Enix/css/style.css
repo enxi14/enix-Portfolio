@@ -3,7 +3,6 @@
 
 
 @keyframes moveleftToRight {
-  0% {
     opacity: 0;
     transform: translateX(100%);
   }
@@ -27,11 +26,12 @@ h1 {
   color: #000;
 }
 
-.fa-github:hover,
+.fa-github:hover;
 .fa-github:focus {
   color: #000;
   transform: scale(1.1);
 }
+
 .page-header {
   margin-top: 4rem;
   font-size: 1.25rem;
