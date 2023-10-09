@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-
-
 @keyframes moveleftToRight {
+  0% {
     opacity: 0;
     transform: translateX(100%);
   }
@@ -11,22 +10,15 @@
     opacity: 1;
     transform: translateX(0);
   }
-
-
-h1 {
-  animation: moveleftToRight 5s ease-in-out;
-}
-
-h1 {
-  animation: moveleftToRight 5s ease-in-out;
 }
 
 h1 {
   font-weight: bold;
   color: #000;
+  animation: moveleftToRight 5s ease-in-out;
 }
 
-.fa-github:hover;
+.fa-github:hover,
 .fa-github:focus {
   color: #000;
   transform: scale(1.1);
@@ -37,28 +29,22 @@ h1 {
   font-size: 1.25rem;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
+  /* Define styles for smaller screens here */
 }
-
 
 .banner10 h2 {
   font-size: 3rem;
 }
 
-
-@keyframes slideInLeft {}
-
-#idLinkedInIcon {
-  background-color: rgb(0, 102, 170);
-  border-radius: 6px;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  font: bold 30px Arial, Helvetica, sans-serif;
-  height: 30px;
-  margin-top: 1px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
   text-align: center;
-  width: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 #idLinkedInIcon:hover {
