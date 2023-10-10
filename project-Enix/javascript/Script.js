@@ -117,3 +117,16 @@ var registrationForm = document.getElementById("registrationForm");
 registrationForm.onsubmit = function () {
     return validateForm();
 };
+
+function isValidEmail(email) {
+    // Basic email format validation using a regular expression
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+}
+
+function isValidPhoneNumber(phone) {
+    // Basic phone number format validation using a regular expression
+    var phoneRegex = /^[0-9]{10}$/;
+    return phoneRegex.test(phone);
+}
+
