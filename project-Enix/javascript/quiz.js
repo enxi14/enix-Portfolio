@@ -1,51 +1,25 @@
-const questions = [
-    {
-        question: "What is the capital of France?",
-        choices: ["Berlin", "Madrid", "Paris", "Rome"],
-        correctAnswer: "Paris"
-    },
-    {
-        question: "Which planet is known as the Red Planet?",
-        choices: ["Earth", "Mars", "Jupiter", "Venus"],
-        correctAnswer: "Mars"
-    },
-    {
-        question: "Which gas do plants absorb from the atmosphere?",
-        choices: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
-        correctAnswer: "Carbon Dioxide"
-    },
-    {
-        question: "What is the largest mammal in the world?",
-        choices: ["Elephant", "Giraffe", "Blue Whale", "Lion"],
-        correctAnswer: "Blue Whale"
-    },
-    {
-        question: "Which element has the chemical symbol 'Fe'?",
-        choices: ["Iron", "Gold", "Silver", "Copper"],
-        correctAnswer: "Iron"
-    },
-    // Add more questions here
-];
+$(document).ready(function () {
+    const correctAnswer = "Paris";
+    let answered = false;
+
+    $(".option").on("click", function () {
+        if (answered) return;
+
+        answered = true;
+        $(this).css("background-color", "#85f00e"); // Correct color
+
+        if ($(this).text() === correctAnswer) {
+            $(".feedback").text("Correct! Paris is the capital of France.");
+        } else {
+            $(".feedback").text("Incorrect. The correct answer is Paris.");
+            $(".option:contains('" + correctAnswer + "')").css("background-color", "#85f00e"); // Highlight correct answer
+        }
+
+        $(".option").off("click"); // Disable other options
+    });
+});
 
 
-const questionElement = $("#question");
-    const choicesElement = $("#choices");
-    const submitButton = $("#submit");
-    const resultElement = $("#result");
-
-    let currentQuestion = 0;
-    let score = 0;
-
-    function displayQuestion() {
-        questionElement.text(questions[currentQuestion].question);
-        choicesElement.empty();
-
-        questions[currentQuestion].choices.forEach(choice => {
-            const li = $("<li>").text(choice);
-            li.on("click", checkAnswer);
-            choicesElement.append(li);
-        });
-    }
 
     function checkAnswer() {
         const selectedAnswer = $(this).text();
