@@ -110,5 +110,5 @@ const questions = [
 
 function goToHomePage() {
             // Replace 'your_home_page.html' with the URL of your home page
-            window.location.href = 'href="./"';
+            window.location.href = 'enxi14/enix13/index.html';
         }
