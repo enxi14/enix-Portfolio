@@ -112,66 +112,29 @@ $(document).ready(function () {
         $(".options .option").each(function (index) {
             $(this).text(questionData.options[index]);
             $(this).css("background-color", "");
-        });
+            $(this).off("click");
+            $(this).on("click", function () {
+                if (answered) return;
 
-        $(".options .option").on("click", function () {
-            if (answered) return;
+                answered = true;
+                $(this).css("background-color", "#0884c7");
 
-            answered = true;
-            $(this).css("background-color", "#0884c7");
+                const selectedOption = $(this).text();
+                const correctAnswer = questions[currentQuestion].correctAnswer;
 
-            const selectedOption = $(this).text();
-            const correctAnswer = questions[currentQuestion].correctAnswer;
+                if (selectedOption === correctAnswer) {
+                    $(".feedback").text("Correct! " + correctAnswer + " is the correct answer.");
+                } else {
+                    $(".feedback").text("Incorrect. The correct answer is " + correctAnswer + ".");
+                    $(".option:contains('" + correctAnswer + "')").css("background-color", "#f00505");
+                }
 
-            if (selectedOption === correctAnswer) {
-                $(".feedback").text("Correct! " + correctAnswer + " is the correct answer.");
-            } else {
-                $(".feedback").text("Incorrect. The correct answer is " + correctAnswer + ".");
-                $(".options .option:contains('" + correctAnswer + "')").css("background-color", "#f00505");
-            }
-
-            $("#next-button").show();
+                $("#next-button").show();
+            });
         });
 
         answered = false;
     }
-
-    function resetQuiz() {
-        currentQuestion = 0;
-        loadQuestion();
-        $(".start-screen").show();
-        $(".question").hide();
-        $(".options").hide();
-        $("#start-button").show();
-        $("#reset-button").hide();
-        $("#next-button").hide();
-        $(".feedback").empty();
-    }
-
-    loadQuestion();
-
-    $("#start-button").on("click", function () {
-        $(".start-screen").hide();
-        $(".question").show();
-        $(".options").show();
-        resetQuiz();
-    });
-
-    $("#next-button").on("click", function () {
-        if (currentQuestion < questions.length - 1) {
-            currentQuestion++;
-            loadQuestion();
-            $("#next-button").hide();
-            $(".feedback").empty();
-        } else {
-            $(".feedback").text("Quiz completed.");
-            $("#next-button").hide();
-        }
-    });
-
-    $("#reset-button").on("click", function () {
-        resetQuiz();
-    });
 
     function goToHomePage() {
         // Replace 'your_home_page.html' with the URL of your home page
