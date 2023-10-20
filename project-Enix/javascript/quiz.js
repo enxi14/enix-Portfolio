@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    const questions = [
-},
-    {
+    const questions = []
+    }
+{
     question: "In the world of anime, who is known as the 'Pirate King'?",
     options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
     correctAnswer: "Monkey D. Luffy"
