@@ -1,55 +1,55 @@
 $(document).ready(function () {
 const questions = [
     {
-        question: "What anime features a ninja named Naruto Uzumaki?",
-        options: ["Bleach", "One Piece", "Naruto", "Dragon Ball"],
-        correctAnswer: "Naruto"
-    },
-    {
-        question: "In which anime series does a group of kids enter the Digital World?",
-        options: ["Pokémon", "Yu-Gi-Oh!", "Digimon", "Sailor Moon"],
-        correctAnswer: "Digimon"
-    },
-    {
-        question: "What is the name of the main character in 'Attack on Titan'?",
-        options: ["Eren Yeager", "Goku", "Monkey D. Luffy", "Ichigo Kurosaki"],
-        correctAnswer: "Eren Yeager"
-    },
-    {
-        question: "Which anime is known for its 'Sharingan' and 'Rasengan' techniques?",
-        options: ["One Punch Man", "Naruto", "Attack on Titan", "Dragon Ball Z"],
-        correctAnswer: "Naruto"
-    },
-    {
-        question: "What popular anime is set in the 'Soul Society' and features Shinigami (soul reapers)?",
-        options: ["Naruto", "Bleach", "One Piece", "Death Note"],
-        correctAnswer: "Bleach"
-    },
-    {
-        question: "In which American animated series do the characters live in a fictional underwater city called Bikini Bottom?",
-        options: ["The Simpsons", "South Park", "SpongeBob SquarePants", "Family Guy"],
-        correctAnswer: "SpongeBob SquarePants"
-    },
-    {
-        question: "What animated series follows the adventures of a boy and his magical dog in a post-apocalyptic world?",
-        options: ["Adventure Time", "Regular Show", "Futurama", "American Dad!"],
-        correctAnswer: "Adventure Time"
-    },
-    {
-        question: "What is the name of the animated series in which a boy discovers a portal to other dimensions and has a portal gun?",
-        options: ["The Fairly OddParents", "Rick and Morty", "The Powerpuff Girls", "Dexter's Laboratory"],
-        correctAnswer: "Rick and Morty"
-    },
-    {
-        question: "In which animated show do four boys often get into bizarre and surreal adventures?",
-        options: ["Rick and Morty", "Futurama", "South Park", "The Simpsons"],
-        correctAnswer: "South Park"
-    },
-    {
-        question: "Which animated series features the Griffins, a dysfunctional family living in the fictional town of Quahog, Rhode Island?",
-        options: ["The Simpsons", "American Dad!", "South Park", "Family Guy"],
-        correctAnswer: "Family Guy"
-    }
+    question: "In the world of anime, who is known as the 'Pirate King'?",
+    options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
+    correctAnswer: "Monkey D. Luffy"
+},
+{
+    question: "Which anime series features a young alchemist named Edward Elric in his quest to find the Philosopher's Stone?",
+    options: ["Fullmetal Alchemist", "One Piece", "Death Note", "Bleach"],
+    correctAnswer: "Fullmetal Alchemist"
+},
+{
+    question: "What is the name of the famous Studio Ghibli film about a young girl and her parents who are transformed into pigs?",
+    options: ["Princess Mononoke", "My Neighbor Totoro", "Spirited Away", "Howl's Moving Castle"],
+    correctAnswer: "Spirited Away"
+},
+{
+    question: "Which animated series features a character named Bender who is a bending robot?",
+    options: ["Rick and Morty", "The Simpsons", "Futurama", "South Park"],
+    correctAnswer: "Futurama"
+},
+{
+    question: "In 'Avatar: The Last Airbender,' which element can Aang bend?",
+    options: ["Water", "Fire", "Earth", "Air"],
+    correctAnswer: "Air"
+},
+{
+    question: "What is the name of the young witch and her talking cat in the Studio Ghibli film 'Kiki's Delivery Service'?",
+    options: ["Kiki and Jiji", "Sakura and Totoro", "Chihiro and No-Face", "Sophie and Howl"],
+    correctAnswer: "Kiki and Jiji"
+},
+{
+    question: "Which animated series features a group of babies who have adventures and solve mysteries?",
+    options: ["Rugrats", "The Flintstones", "The Jetsons", "The Smurfs"],
+    correctAnswer: "Rugrats"
+},
+{
+    question: "What is the name of the animated show featuring a talking sponge who lives in a pineapple under the sea?",
+    options: ["SpongeBob SquarePants", "The Fairly OddParents", "Scooby-Doo", "Tom and Jerry"],
+    correctAnswer: "SpongeBob SquarePants"
+},
+{
+    question: "Which animated series follows the misadventures of a mad scientist and his grandson?",
+    options: ["The Powerpuff Girls", "Dexter's Laboratory", "Rick and Morty", "Futurama"],
+    correctAnswer: "Rick and Morty"
+},
+{
+    question: "In 'My Hero Academia,' what is the protagonist Izuku Midoriya's superhero alias?",
+    options: ["Red Riot", "Deku", "Shoto", "All Might"],
+    correctAnswer: "Deku"
+}
 ];
 
 
