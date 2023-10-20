@@ -1,12 +1,11 @@
 $(document).ready(function () {
-    const questions = []
-    }
-{
-    question: "In the world of anime, who is known as the 'Pirate King'?",
-    options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
-    correctAnswer: "Monkey D. Luffy"
-},
-{
+    const questions = [
+        {
+            question: "In the world of anime, who is known as the 'Pirate King'?",
+            options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
+            correctAnswer: "Monkey D. Luffy"
+        },
+    {
     question: "Which anime series features a young alchemist named Edward Elric in his quest to find the Philosopher's Stone?",
     options: ["Fullmetal Alchemist", "One Piece", "Death Note", "Bleach"],
     correctAnswer: "Fullmetal Alchemist"
@@ -102,7 +101,7 @@ $(document).ready(function () {
     correctAnswer: "Attack on Titan"
 }
 
-
+];
 
     let currentQuestion = 0;
     let answered = false;
@@ -143,8 +142,10 @@ $(document).ready(function () {
         currentQuestion = 0;
         loadQuestion();
         $("#start-button").hide();
-        $("#next-button").hide();
         $("#reset-button").show();
+        $("#next-button").show();
+        $("#next-button").text("Next");
+        $(".feedback").empty();
     });
 
     $("#next-button").on("click", function () {
@@ -152,6 +153,7 @@ $(document).ready(function () {
             currentQuestion++;
             loadQuestion();
             $("#next-button").hide();
+            $(".feedback").empty();
         } else {
             $(".feedback").text("Quiz completed.");
             $("#next-button").hide();
@@ -160,12 +162,12 @@ $(document).ready(function () {
 
     // Function to reset the quiz
     function resetQuiz() {
+        currentQuestion = 0;
+        loadQuestion();
+        $("#start-button").hide();
+        $("#reset-button").show();
+        $("#next-button").show();
         $(".feedback").empty();
-        $(".option").css("background-color", "#e0e0e0");
-        $(".option").on("click", handleAnswerClick);
-        $("#reset-button").hide();
-        $("#next-button").hide();
-        answered = false;
     }
 
     // Click event for the reset button
@@ -176,6 +178,5 @@ $(document).ready(function () {
     function goToHomePage() {
         // Replace 'your_home_page.html' with the URL of your home page
         window.location.href = 'index.html';
-}
-    {
+    }
 });
