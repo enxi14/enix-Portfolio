@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('your-animated-background.gif') center center fixed;
-    background-size: cover;
+    background: #000;
     color: #fff;
     font-family: Arial, sans-serif;
     overflow: hidden;
