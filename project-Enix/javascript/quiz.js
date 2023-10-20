@@ -49,7 +49,7 @@ const questions = [
     question: "In 'My Hero Academia,' what is the protagonist Izuku Midoriya's superhero alias?",
     options: ["Red Riot", "Deku", "Shoto", "All Might"],
     correctAnswer: "Deku"
-    }
+    },
 {
     question: "In the anime 'One Piece,' what is the name of the main character who aspires to become the Pirate King?",
     options: ["Luffy", "Naruto", "Ichigo", "Goku"],
