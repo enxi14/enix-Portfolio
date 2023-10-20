@@ -3,30 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="project-Enix/css/custom.css">
-    <title>Anime and Cartoons Quiz App</title>
+    <title>Anime & Cartoon Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="quiz-container">
-        <div class="start-screen">
-            <h1>Welcome to the Anime and Cartoons Quiz!</h1>
-            <button id="start-button">Start Quiz</button>
+    <div class="container">
+        <h1>Anime & Cartoon Quiz</h1>
+        <div id="quiz-container">
+            <p id="question">Question goes here</p>
+            <ul id="choices">
+                <li class="choice">Choice 1</li>
+                <li class="choice">Choice 2</li>
+                <li class="choice">Choice 3</li>
+            </ul>
         </div>
-        <div class="question" style="display: none;"></div>
-        <ul class="options" style="display: none;">
-            <li class="option">Option 1</li>
-            <li class="option">Option 2</li>
-            <li class="option">Option 3</li>
-            <li class="option">Option 4</li>
-        </ul>
-        <div class="feedback" style="display: none;"></div>
-        <button id="next-button" style="display: none;">Next</button>
-        <button id="reset-button" style="display: none;">Reset Quiz</button>
+        <p id="result">Score: 0</p>
+        <button id="next-button">Next</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="project-Enix/javascript/quiz.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
