@@ -1,27 +1,34 @@
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #0ab2f5;
-    background-image: url('your-anime-background-image.jpg');
-    /* Replace with your anime background image */
-    background-size: cover;
-    background-repeat: no-repeat;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    animation: animate 20s linear infinite;
 }
 
 .quiz-container {
+    position: relative;
+    z-index: 1;
     text-align: center;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: rgba(255, 4, 4, 0.8);
-    /* Add some transparency to the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    color: #000;
-    /* Change text color to black */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-animated-background.gif');
+    /* Replace with your animated background image */
+    background-size: cover;
+    opacity: 0.2;
+}
+
+h1 {
+    margin-top: 20px;
 }
 
 .options .option {
@@ -31,9 +38,6 @@ body {
     background-color: #e0e0e0;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-weight: bold;
-    color: #333;
-    /* Darken the text color */
 }
 
 .options .option:hover {
@@ -42,17 +46,26 @@ body {
 
 .feedback {
     margin-top: 10px;
-    font-weight: bold;
-    color: #e74c3c;
-    /* Red for incorrect feedback */
 }
 
-.home-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 10px;
-    background-color: #0ab2f5;
-    color: #000000;
-    text-decoration: none;
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

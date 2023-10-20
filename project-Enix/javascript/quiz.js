@@ -1,12 +1,13 @@
 $(document).ready(function () {
     const questions = [
-        {
-            question: "In the world of anime, who is known as the 'Pirate King'?",
-            options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
-            correctAnswer: "Monkey D. Luffy"
-        },
+{
+    question: "In the world of anime, who is known as the 'Pirate King'?",
+    options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
+    correctAnswer: "Monkey D. Luffy"
+    },
+        
     {
-    question: "Which anime series features a young alchemist named Edward Elric in his quest to find the Philosopher's Stone?",
+        question: "Which anime series features a young alchemist named Edward Elric in his quest to find the Philosopher's Stone?",
     options: ["Fullmetal Alchemist", "One Piece", "Death Note", "Bleach"],
     correctAnswer: "Fullmetal Alchemist"
 },
@@ -100,8 +101,7 @@ $(document).ready(function () {
     options: ["Attack on Titan", "Death Note", "Naruto", "One Piece"],
     correctAnswer: "Attack on Titan"
 }
-
-];
+    ];
 
     let currentQuestion = 0;
     let answered = false;
@@ -117,7 +117,7 @@ $(document).ready(function () {
                 if (answered) return;
 
                 answered = true;
-                $(this).css("background-color", "#0884c7"); // Correct color
+                $(this).css("background-color", "#0884c7");
 
                 const selectedOption = $(this).text();
                 const correctAnswer = questions[currentQuestion].correctAnswer;
@@ -126,7 +126,7 @@ $(document).ready(function () {
                     $(".feedback").text("Correct! " + correctAnswer + " is the correct answer.");
                 } else {
                     $(".feedback").text("Incorrect. The correct answer is " + correctAnswer + ".");
-                    $(".option:contains('" + correctAnswer + "')").css("background-color", "#f00505"); // Highlight correct answer
+                    $(".option:contains('" + correctAnswer + "')").css("background-color", "#f00505");
                 }
 
                 $("#next-button").show();
@@ -136,16 +136,19 @@ $(document).ready(function () {
         answered = false;
     }
 
+    function resetQuiz() {
+        currentQuestion = 0;
+        loadQuestion();
+        $("#start-button").show();
+        $("#reset-button").hide();
+        $("#next-button").hide();
+        $(".feedback").empty();
+    }
+
     loadQuestion();
 
     $("#start-button").on("click", function () {
-        currentQuestion = 0;
-        loadQuestion();
-        $("#start-button").hide();
-        $("#reset-button").show();
-        $("#next-button").show();
-        $("#next-button").text("Next");
-        $(".feedback").empty();
+        resetQuiz();
     });
 
     $("#next-button").on("click", function () {
@@ -160,23 +163,11 @@ $(document).ready(function () {
         }
     });
 
-    // Function to reset the quiz
-    function resetQuiz() {
-        currentQuestion = 0;
-        loadQuestion();
-        $("#start-button").hide();
-        $("#reset-button").show();
-        $("#next-button").show();
-        $(".feedback").empty();
-    }
-
-    // Click event for the reset button
     $("#reset-button").on("click", function () {
         resetQuiz();
     });
 
     function goToHomePage() {
-        // Replace 'your_home_page.html' with the URL of your home page
-        window.location.href = 'index.html';
+    window.location.href = 'Quiz.html';
     }
 });
