@@ -139,6 +139,9 @@ $(document).ready(function () {
     function resetQuiz() {
         currentQuestion = 0;
         loadQuestion();
+        $(".start-screen").show();
+        $(".question").hide();
+        $(".options").hide();
         $("#start-button").show();
         $("#reset-button").hide();
         $("#next-button").hide();
@@ -148,6 +151,9 @@ $(document).ready(function () {
     loadQuestion();
 
     $("#start-button").on("click", function () {
+        $(".start-screen").hide();
+        $(".question").show();
+        $(".options").show();
         resetQuiz();
     });
 
@@ -168,6 +174,7 @@ $(document).ready(function () {
     });
 
     function goToHomePage() {
-    window.location.href = 'Quiz.html';
+        // Replace 'your_home_page.html' with the URL of your home page
+        window.location.href = 'index.html';
     }
 });

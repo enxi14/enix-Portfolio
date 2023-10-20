@@ -10,22 +10,22 @@
 
 <body>
     <div class="quiz-container">
-        <h1>Anime and Cartoons Quiz</h1>
-        <div class="background"></div>
-        <div class="question"></div>
-        <ul class="options">
+        <div class="start-screen">
+            <h1>Welcome to the Anime and Cartoons Quiz!</h1>
+            <button id="start-button">Start Quiz</button>
+        </div>
+        <div class="question" style="display: none;"></div>
+        <ul class="options" style="display: none;">
             <li class="option">Option 1</li>
             <li class="option">Option 2</li>
             <li class="option">Option 3</li>
             <li class="option">Option 4</li>
         </ul>
-        <div class="feedback"></div>
-        <button id="start-button">Start Quiz</button>
+        <div class="feedback" style="display: none;"></div>
         <button id="next-button" style="display: none;">Next</button>
         <button id="reset-button" style="display: none;">Reset Quiz</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="project-Enix/javascript/quiz.js"></script>
 </body>
-
 </html>
