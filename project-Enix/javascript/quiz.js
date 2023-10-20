@@ -1,5 +1,6 @@
 $(document).ready(function () {
-const questions = [
+    const questions = [
+},
     {
     question: "In the world of anime, who is known as the 'Pirate King'?",
     options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
@@ -100,7 +101,7 @@ const questions = [
     options: ["Attack on Titan", "Death Note", "Naruto", "One Piece"],
     correctAnswer: "Attack on Titan"
 }
-];
+
 
 
     let currentQuestion = 0;
@@ -143,6 +144,7 @@ const questions = [
         loadQuestion();
         $("#start-button").hide();
         $("#next-button").hide();
+        $("#reset-button").show();
     });
 
     $("#next-button").on("click", function () {
@@ -155,10 +157,24 @@ const questions = [
             $("#next-button").hide();
         }
     });
+
+    // Function to reset the quiz
+    function resetQuiz() {
+        $(".feedback").empty();
+        $(".option").css("background-color", "#e0e0e0");
+        $(".option").on("click", handleAnswerClick);
+        $("#reset-button").hide();
+        $("#next-button").hide();
+        answered = false;
+    }
+
+    // Click event for the reset button
+    $("#reset-button").on("click", function () {
+        resetQuiz();
+    });
+
+    function goToHomePage() {
+        // Replace 'your_home_page.html' with the URL of your home page
+        window.location.href = 'index.html';
+    }
 });
-
-
-function goToHomePage() {
-            // Replace 'your_home_page.html' with the URL of your home page
-            window.location.href = 'index.html';
-        }
