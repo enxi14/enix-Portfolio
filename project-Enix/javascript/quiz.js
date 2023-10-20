@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    const questions = []
-    }
+    const questions = [
         {
             question: "What is the name of the protagonist in 'Naruto'?",
             choices: ["Naruto Uzumaki", "Sasuke Uchiha", "Sakura Haruno"],
@@ -11,8 +10,7 @@ $(document).ready(function () {
             choices: ["Mickey Mouse", "Bugs Bunny", "SpongeBob SquarePants"],
             correct: 2
         },
-        // Add more questions here
-        {
+    {
             question: "Which anime series features a young alchemist named Edward Elric in his quest to find the Philosopher's Stone?",
             choices: ["Fullmetal Alchemist", "One Piece", "Death Note", "Bleach"],
             correct: 0
@@ -106,9 +104,8 @@ $(document).ready(function () {
             question: "Which anime series is set in a world where humanity is on the brink of extinction due to the Titans, gigantic humanoid creatures?",
             choices: ["Attack on Titan", "Death Note", "Naruto", "One Piece"],
             correct: 0
-    }
-
-[],
+        }
+    ];
 
     let currentQuestion = 0;
     let score = 0;
@@ -153,4 +150,10 @@ $(document).ready(function () {
         if (currentQuestion < questions.length) {
             showQuestion();
         } else {
-        },
+            showResult();
+        }
+    });
+
+    // Start the quiz
+    showQuestion();
+});
