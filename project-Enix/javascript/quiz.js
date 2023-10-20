@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const questions = [
+    const questions = []
     }
         {
             question: "What is the name of the protagonist in 'Naruto'?",
@@ -106,8 +106,9 @@ $(document).ready(function () {
             question: "Which anime series is set in a world where humanity is on the brink of extinction due to the Titans, gigantic humanoid creatures?",
             choices: ["Attack on Titan", "Death Note", "Naruto", "One Piece"],
             correct: 0
-        }
-    ];
+    }
+
+[],
 
     let currentQuestion = 0;
     let score = 0;
