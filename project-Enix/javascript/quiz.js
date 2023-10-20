@@ -49,6 +49,56 @@ const questions = [
     question: "In 'My Hero Academia,' what is the protagonist Izuku Midoriya's superhero alias?",
     options: ["Red Riot", "Deku", "Shoto", "All Might"],
     correctAnswer: "Deku"
+    }
+{
+    question: "In the anime 'One Piece,' what is the name of the main character who aspires to become the Pirate King?",
+    options: ["Luffy", "Naruto", "Ichigo", "Goku"],
+    correctAnswer: "Luffy"
+},
+{
+    question: "Which anime is known for its giant humanoid creatures known as Titans?",
+    options: ["Attack on Titan", "Naruto", "Dragon Ball Z", "One Piece"],
+    correctAnswer: "Attack on Titan"
+},
+{
+    question: "What is the name of the organization in 'Death Note' that seeks to capture Kira, the serial killer?",
+    options: ["Soul Society", "Akatsuki", "Phantom Troupe", "Task Force"],
+    correctAnswer: "Task Force"
+},
+{
+    question: "Which anime series features a young alchemist named Edward Elric and his brother Alphonse on a quest to find the Philosopher's Stone?",
+    options: ["Naruto", "One Piece", "Fullmetal Alchemist", "Bleach"],
+    correctAnswer: "Fullmetal Alchemist"
+},
+{
+    question: "In 'Dragon Ball Z,' what is the name of Goku's signature attack that he often uses to defeat powerful enemies?",
+    options: ["Kamehameha", "Spirit Bomb", "Final Flash", "Rasengan"],
+    correctAnswer: "Kamehameha"
+},
+{
+    question: "What is the name of the mythical creature that serves as the main mode of transportation in 'My Neighbor Totoro'?",
+    options: ["Neko Bus", "Kiki's Broomstick", "Soot Sprites", "No-Face"],
+    correctAnswer: "Neko Bus"
+},
+{
+    question: "Which anime series features a world where humans and creatures called 'Ghouls' coexist, often in conflict?",
+    options: ["Naruto", "Attack on Titan", "Tokyo Ghoul", "One Punch Man"],
+    correctAnswer: "Tokyo Ghoul"
+},
+{
+    question: "In 'Cowboy Bebop,' what is the profession of the main character, Spike Spiegel?",
+    options: ["Bounty Hunter", "Pirate", "Space Detective", "Chef"],
+    correctAnswer: "Bounty Hunter"
+},
+{
+    question: "What is the name of the magical book that leads to various adventures in 'The Mysterious Cities of Gold'?",
+    options: ["The Book of Prophecies", "The Golden Atlas", "The Solar Calendar", "The Olmec Medallion"],
+    correctAnswer: "The Solar Calendar"
+},
+{
+    question: "Which anime series is set in a world where humanity is on the brink of extinction due to the Titans, gigantic humanoid creatures?",
+    options: ["Attack on Titan", "Death Note", "Naruto", "One Piece"],
+    correctAnswer: "Attack on Titan"
 }
 ];
 
