@@ -1,14 +1,13 @@
 $(document).ready(function () {
     const questions = [
-    }
-{
-    question: "In the world of anime, who is known as the 'Pirate King'?",
-    options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
-    correctAnswer: "Monkey D. Luffy"
-    },
+        {
+            question: "In the world of anime, who is known as the 'Pirate King'?",
+            options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
+            correctAnswer: "Monkey D. Luffy"
+        },
         
     {
-        question: "Which anime series features a young alchemist named Edward Elric in his quest to find the Philosopher's Stone?",
+    question: "Which anime series features a young alchemist named Edward Elric in his quest to find the Philosopher's Stone?",
     options: ["Fullmetal Alchemist", "One Piece", "Death Note", "Bleach"],
     correctAnswer: "Fullmetal Alchemist"
 },
@@ -141,4 +140,41 @@ $(document).ready(function () {
         currentQuestion = 0;
         loadQuestion();
         $(".start-screen").show();
-        $(".question
+        $(".question").hide();
+        $(".options").hide();
+        $("#start-button").show();
+        $("#reset-button").hide();
+        $("#next-button").hide();
+        $(".feedback").empty();
+    }
+
+    loadQuestion();
+
+    $("#start-button").on("click", function () {
+        $(".start-screen").hide();
+        $(".question").show();
+        $(".options").show();
+        resetQuiz();
+    });
+
+    $("#next-button").on("click", function () {
+        if (currentQuestion < questions.length - 1) {
+            currentQuestion++;
+            loadQuestion();
+            $("#next-button").hide();
+            $(".feedback").empty();
+        } else {
+            $(".feedback").text("Quiz completed.");
+            $("#next-button").hide();
+        }
+    });
+
+    $("#reset-button").on("click", function () {
+        resetQuiz();
+    });
+
+    function goToHomePage() {
+        // Replace 'your_home_page.html' with the URL of your home page
+        window.location.href = 'index.html';
+    }
+});
