@@ -1,13 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const options = document.querySelectorAll(".option");
-    const feedback = document.querySelector(".feedback");
-    const nextButton = document.getElementById("next-button");
-    const resetButton = document.getElementById("reset-button");
-
-    let currentQuestion = 0;
-
-    // Questions and answers
+$(document).ready(function () {
     const questions = [
+        {
+            question: "In the world of anime, who is known as the 'Pirate King'?",
+            options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
+            correctAnswer: "Monkey D. Luffy"
+        },
+        // Add more questions here...
         {
     question: "Which anime series features a young alchemist named Edward Elric in his quest to find the Philosopher's Stone?",
     options: ["Fullmetal Alchemist", "One Piece", "Death Note", "Bleach"],
@@ -105,49 +103,78 @@ document.addEventListener("DOMContentLoaded", function () {
 }
     ];
 
-    function loadQuestion(questionIndex) {
-        const questionData = questions[questionIndex];
-        document.querySelector("h1").textContent = questionData.question;
+    let currentQuestion = 0;
+    let answered = false;
 
-        options.forEach((option, index) => {
-            option.textContent = questionData.options[index];
-            option.style.backgroundColor = "";
-            option.onclick = () => checkAnswer(option.textContent, questionData.correctAnswer);
+    function loadQuestion() {
+        const questionData = questions[currentQuestion];
+        $(".question").text(questionData.question);
+        $(".options .option").each(function (index) {
+            $(this).text(questionData.options[index]);
+            $(this).css("background-color", "");
         });
 
-        feedback.textContent = "";
-        nextButton.style.display = "none";
-    }
+        $(".options .option").on("click", function () {
+            if (answered) return;
 
-    function checkAnswer(selectedOption, correctAnswer) {
-        if (selectedOption === correctAnswer) {
-            feedback.textContent = "Correct! Well done.";
-        } else {
-            feedback.textContent = `Incorrect. The correct answer is: ${correctAnswer}`;
-        }
+            answered = true;
+            $(this).css("background-color", "#0884c7");
 
-        options.forEach(option => {
-            option.style.backgroundColor = selectedOption === correctAnswer ? "#00FF00" : "#FF0000";
-            option.onclick = null;
+            const selectedOption = $(this).text();
+            const correctAnswer = questions[currentQuestion].correctAnswer;
+
+            if (selectedOption === correctAnswer) {
+                $(".feedback").text("Correct! " + correctAnswer + " is the correct answer.");
+            } else {
+                $(".feedback").text("Incorrect. The correct answer is " + correctAnswer + ".");
+                $(".options .option:contains('" + correctAnswer + "')").css("background-color", "#f00505");
+            }
+
+            $("#next-button").show();
         });
 
-        nextButton.style.display = "block";
+        answered = false;
     }
 
-    nextButton.addEventListener("click", () => {
-        currentQuestion++;
-        if (currentQuestion < questions.length) {
-            loadQuestion(currentQuestion);
-        } else {
-            feedback.textContent = "Quiz Completed";
-            nextButton.style.display = "none";
-        }
-    });
-
-    resetButton.addEventListener("click", () => {
+    function resetQuiz() {
         currentQuestion = 0;
-        loadQuestion(currentQuestion);
+        loadQuestion();
+        $(".start-screen").show();
+        $(".question").hide();
+        $(".options").hide();
+        $("#start-button").show();
+        $("#reset-button").hide();
+        $("#next-button").hide();
+        $(".feedback").empty();
+    }
+
+    loadQuestion();
+
+    $("#start-button").on("click", function () {
+        $(".start-screen").hide();
+        $(".question").show();
+        $(".options").show();
+        resetQuiz();
     });
 
-    loadQuestion(currentQuestion);
+    $("#next-button").on("click", function () {
+        if (currentQuestion < questions.length - 1) {
+            currentQuestion++;
+            loadQuestion();
+            $("#next-button").hide();
+            $(".feedback").empty();
+        } else {
+            $(".feedback").text("Quiz completed.");
+            $("#next-button").hide();
+        }
+    });
+
+    $("#reset-button").on("click", function () {
+        resetQuiz();
+    });
+
+    function goToHomePage() {
+        // Replace 'your_home_page.html' with the URL of your home page
+        window.location.href = 'index.html';
+    }
 });
