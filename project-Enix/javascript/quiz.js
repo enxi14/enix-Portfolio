@@ -176,5 +176,6 @@ $(document).ready(function () {
     function goToHomePage() {
         // Replace 'your_home_page.html' with the URL of your home page
         window.location.href = 'index.html';
-    }
+}
+    {
 });
