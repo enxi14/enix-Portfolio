@@ -1,5 +1,6 @@
 $(document).ready(function () {
     const questions = [
+    }
 {
     question: "In the world of anime, who is known as the 'Pirate King'?",
     options: ["Monkey D. Luffy", "Goku", "Naruto Uzumaki", "Eren Yeager"],
@@ -140,41 +141,4 @@ $(document).ready(function () {
         currentQuestion = 0;
         loadQuestion();
         $(".start-screen").show();
-        $(".question").hide();
-        $(".options").hide();
-        $("#start-button").show();
-        $("#reset-button").hide();
-        $("#next-button").hide();
-        $(".feedback").empty();
-    }
-
-    loadQuestion();
-
-    $("#start-button").on("click", function () {
-        $(".start-screen").hide();
-        $(".question").show();
-        $(".options").show();
-        resetQuiz();
-    });
-
-    $("#next-button").on("click", function () {
-        if (currentQuestion < questions.length - 1) {
-            currentQuestion++;
-            loadQuestion();
-            $("#next-button").hide();
-            $(".feedback").empty();
-        } else {
-            $(".feedback").text("Quiz completed.");
-            $("#next-button").hide();
-        }
-    });
-
-    $("#reset-button").on("click", function () {
-        resetQuiz();
-    });
-
-    function goToHomePage() {
-        // Replace 'your_home_page.html' with the URL of your home page
-        window.location.href = 'index.html';
-    }
-});
+        $(".question
