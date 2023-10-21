@@ -118,14 +118,26 @@ $(document).ready(function () {
 
     function checkAnswer(selectedIndex) {
         const questionData = questions[currentQuestion];
-        if (selectedIndex === questionData.correct) {
+        const correctIndex = questionData.correct;
+        const choices = $("#choices .choice");
+
+        // Disable clicking on all answer choices to prevent further selections
+        choices.off('click');
+
+        if (selectedIndex === correctIndex) {
             score++;
+            // Change the background color to green for the correct answer
+            choices.eq(correctIndex).css('background-color', 'green');
+        } else {
+            // Change the background color to red for the wrong answer
+            choices.eq(selectedIndex).css('background-color', 'red');
+            choices.eq(correctIndex).css('background-color', 'green');
         }
 
         currentQuestion++;
 
         if (currentQuestion < questions.length) {
-            showQuestion();
+            setTimeout(() => showQuestion(), 1000); // Delay for 1 second before displaying the next question
         } else {
             showResult();
         }
@@ -147,10 +159,4 @@ $(document).ready(function () {
 
     // Start the quiz
     showQuestion();
-
-    $("#home-button").click(() => {
-    // Replace 'your_home_page.html' with the URL of your home page
-    window.location.href = 'index.html';
-});
-
 });
