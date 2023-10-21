@@ -20,8 +20,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('your-animated-background.gif');
-    /* Replace with your animated background image */
     background-size: cover;
     opacity: 0.2;
 }
