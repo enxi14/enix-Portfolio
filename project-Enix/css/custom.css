@@ -1,12 +1,44 @@
 body {
-    background-image: url('https: //images.unsplash.com/photo-1641831705160-5d56ac4094cb?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    /* Add your background image */
-    background-size: cover;
-    background-repeat: no-repeat;
     margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
+    padding: 0;
+    background: linear-gradient(135deg, #000, #00bfff);
     color: #fff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0.2;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.anime-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
 }
 
 .container {
@@ -48,4 +80,10 @@ h1 {
 
 #next-button:hover {
     background-color: #0056b3;
+}
+
+.anime-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
 }
