@@ -147,4 +147,10 @@ $(document).ready(function () {
 
     // Start the quiz
     showQuestion();
+
+    $("#home-button").click(() => {
+    // Replace 'your_home_page.html' with the URL of your home page
+    window.location.href = 'index.html';
+});
+
 });
