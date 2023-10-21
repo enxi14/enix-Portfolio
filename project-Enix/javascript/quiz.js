@@ -160,3 +160,8 @@ $(document).ready(function () {
     // Start the quiz
     showQuestion();
 });
+
+document.getElementById("home-button").addEventListener("click", function() {
+        // Replace 'your-home-url' with the actual URL you want to navigate to
+        window.location.href = 'index.html';
+    });
