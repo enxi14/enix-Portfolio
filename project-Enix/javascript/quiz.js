@@ -71,11 +71,6 @@ $(document).ready(function () {
             correct: 3
         },
         {
-            question: "Which anime series features a young alchemist named Edward Elric and his brother Alphonse on a quest to find the Philosopher's Stone?",
-            choices: ["Naruto", "One Piece", "Fullmetal Alchemist", "Bleach"],
-            correct: 2
-        },
-        {
             question: "In 'Dragon Ball Z,' what is the name of Goku's signature attack that he often uses to defeat powerful enemies?",
             choices: ["Kamehameha", "Spirit Bomb", "Final Flash", "Rasengan"],
             correct: 0
@@ -100,11 +95,7 @@ $(document).ready(function () {
             choices: ["The Book of Prophecies", "The Golden Atlas", "The Solar Calendar", "The Olmec Medallion"],
             correct: 2
         },
-        {
-            question: "Which anime series is set in a world where humanity is on the brink of extinction due to the Titans, gigantic humanoid creatures?",
-            choices: ["Attack on Titan", "Death Note", "Naruto", "One Piece"],
-            correct: 0
-        }
+        
     ];
 
     let currentQuestion = 0;
