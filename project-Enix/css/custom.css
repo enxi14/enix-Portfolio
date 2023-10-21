@@ -88,3 +88,14 @@ h1 {
     margin-right: 20px;
     filter: brightness(0) invert(1);
 }
+
+.blue-button {
+    background-color: blue;
+    color: white;
+    /* Text color */
+    border: none;
+    /* Remove button border */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    cursor: pointer;
+}
