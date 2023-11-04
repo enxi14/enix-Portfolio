@@ -1,4 +1,4 @@
-function collectFormData() {
+async function collectFormData() {
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var age = document.getElementById("age").value;
@@ -14,5 +14,11 @@ function collectFormData() {
             };
 
             // Display JSON data
-            document.getElementById("jsonDataDisplay").innerHTML = "<pre>" + JSON.stringify(formData, null, 2) + "</pre>";
+            var jsonDataDisplay = document.getElementById("jsonDataDisplay");
+            jsonDataDisplay.innerHTML = "Submitting data...";
+
+            // Simulate an asynchronous request (you can replace this with your actual server API)
+            setTimeout(() => {
+                jsonDataDisplay.innerHTML = "<pre>" + JSON.stringify(formData, null, 2) + "</pre>";
+            }, 1500);
         }

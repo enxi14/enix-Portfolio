@@ -57,3 +57,12 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+
+#jsonDataDisplay {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
