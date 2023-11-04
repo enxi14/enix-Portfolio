@@ -1,16 +1,10 @@
 function validateForm() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var name = document.getElementById("Name").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
 
-    if (username.trim() === "") {
-        alert("Please enter a username.");
-        return false;
-    }
-
-    if (password.trim() === "") {
-        alert("Please enter a password.");
+    if (name.trim() === "") {
+        alert("Please enter a name.");
         return false;
     }
 
@@ -30,30 +24,23 @@ function validateForm() {
         return false;
     }
 
-    return true;
+    // Create a JSON object with the form data
+    var formData = {
+        "Name": name,
+        "Email": email,
+        "Phone": phone
+    };
+
+    // Display the JSON data on the page
+    var jsonDataDisplay = document.getElementById("jsonDataDisplay");
+    jsonDataDisplay.textContent = JSON.stringify(formData, null, 2);
+
+    return false; // Prevent the form from actually submitting
 }
 
-function isValidEmail(email) {
-}
-
-function isValidPhoneNumber(phone) {
-    
-}
+// Rest of your code...
 
 var registrationForm = document.getElementById("registrationForm");
 registrationForm.onsubmit = function () {
     return validateForm();
 };
-
-function isValidEmail(email) {
-    // Basic email format validation using a regular expression
-    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailRegex.test(email);
-}
-
-function isValidPhoneNumber(phone) {
-    // Basic phone number format validation using a regular expression
-    var phoneRegex = /^[0-9]{10}$/;
-    return phoneRegex.test(phone);
-}
-
