@@ -57,24 +57,3 @@ body {
   align-items: center;
   height: 100vh;
 }
-  
-
-  #jsonDataDisplay {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-top: 20px;
-      background-color: #f5f5f5;
-      font-family: Arial, sans-serif;
-      max-width: 400px;
-      word-wrap: break-word;
-      /* Wrap long lines of text */
-      white-space: pre-wrap;
-      /* Preserve line breaks */
-      overflow: auto;
-      /* Add scrollbars if content overflows */
-    }
-  
-    #jsonDataDisplay pre {
-      margin: 0;
-      /* Remove default margins for <pre> element */
-    }

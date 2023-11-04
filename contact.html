@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    </head>
+</head>
 
-    <body>
-        
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
-        <a class="navbar-brand text-primary" >ENIX DEV</a>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand text-primary">ENIX DEV</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav lg-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-primary" href=" ./ ">Home</a>
+                    <a class="nav-link text-primary" href="./">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./achievements">Personal Achievements</a>
@@ -36,10 +36,18 @@
                 </li>
             </ul>
         </div>
-        </nav>
+    </nav>
 
     <div id="jsonDataDisplay"></div>
-    
+
+    <form id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <button type="button" onclick="collectFormData()">Submit</button>
+    </form>
+
     <script src="project-Enix/javascript/contact.js"></script>
     <script src="project-Enix/javascript/Script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
